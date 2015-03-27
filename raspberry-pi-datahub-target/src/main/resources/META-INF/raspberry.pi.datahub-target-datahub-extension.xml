@@ -1,0 +1,56 @@
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2014 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+<extension xmlns="http://www.hybris.com/schema/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xsi:schemaLocation="http://www.hybris.com/schema/ datahub-metadata-schema-1.1.0.xsd" name="raspberry-pi-datahub-target">
+	<dependencies>
+		<dependency>
+			<extension>raspberry-pi-datahub-canonical</extension>
+		</dependency>
+	</dependencies>
+	<targetSystems>
+		<targetSystem>
+			<name>RaspberryPiTargetSystem</name>
+			<type>RaspberryPiTargetSystemAdapter</type>
+			<exportURL />
+			<userName />
+			<password />
+			<exportCodes />
+			<targetItems>
+				<item>
+					<type>RaspberryPiCommandTargetItem</type>
+					<canonicalItemSource>RaspberryPiCommandCanonicalItem</canonicalItemSource>
+					<status>ACTIVE</status>
+					<attributes>
+						<attribute>
+							<name>identifier</name>
+							<localizable>false</localizable>
+							<collection>false</collection>
+							<transformationExpression>identifier</transformationExpression>
+						</attribute>
+						<attribute>
+							<name>name</name>
+							<localizable>false</localizable>
+							<collection>false</collection>
+							<transformationExpression>name</transformationExpression>
+						</attribute>
+                        <attribute>
+                            <name>value</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>value</transformationExpression>
+                        </attribute>
+					</attributes>
+				</item>
+			</targetItems>
+		</targetSystem>
+	</targetSystems>
+</extension>
