@@ -19,12 +19,6 @@
             <type>war</type>
         </dependency>
 
-        <dependency>
-            <groupId>com.hybris.datahub</groupId>
-            <artifactId>csv-web-service</artifactId>
-        </dependency>
-
-
         <!-- Raspberry Pi Data Hub extenions -->
         <dependency>
             <groupId>org.robbins</groupId>

@@ -26,28 +26,34 @@
 			<exportCodes />
 			<targetItems>
 				<item>
-					<type>RaspberryPiCommandTargetItem</type>
-					<canonicalItemSource>RaspberryPiCommandCanonicalItem</canonicalItemSource>
+					<type>PiScheduleTargetItem</type>
+					<canonicalItemSource>PiScheduleCanonicalItem</canonicalItemSource>
 					<status>ACTIVE</status>
 					<attributes>
 						<attribute>
-							<name>identifier</name>
+							<name>scheduleName</name>
 							<localizable>false</localizable>
 							<collection>false</collection>
-							<transformationExpression>identifier</transformationExpression>
-						</attribute>
-						<attribute>
-							<name>name</name>
-							<localizable>false</localizable>
-							<collection>false</collection>
-							<transformationExpression>name</transformationExpression>
+							<transformationExpression>scheduleName</transformationExpression>
 						</attribute>
                         <attribute>
-                            <name>value</name>
+                            <name>actionName</name>
                             <localizable>false</localizable>
                             <collection>false</collection>
-                            <transformationExpression>value</transformationExpression>
+                            <transformationExpression>actionName</transformationExpression>
                         </attribute>
+                        <attribute>
+                            <name>actionValue</name>
+                            <localizable>false</localizable>
+                            <collection>false</collection>
+                            <transformationExpression>actionValue</transformationExpression>
+                        </attribute>
+						<attribute>
+							<name>cronTrigger</name>
+							<localizable>false</localizable>
+							<collection>false</collection>
+							<transformationExpression>cronTrigger</transformationExpression>
+						</attribute>
 					</attributes>
 				</item>
 			</targetItems>

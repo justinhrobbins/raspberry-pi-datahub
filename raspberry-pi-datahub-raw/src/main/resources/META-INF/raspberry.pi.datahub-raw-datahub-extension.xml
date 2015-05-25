@@ -20,52 +20,64 @@
 
 	<rawItems>
 		<item>
-			<type>RaspberryPiCommandRawItem</type>
+			<type>PiScheduleRawItem</type>
 			<attributes>
 				<attribute>
-					<name>identifier</name>
-				</attribute>
-				<attribute>
-					<name>name</name>
+					<name>scheduleName</name>
 				</attribute>
                 <attribute>
-                    <name>value</name>
+                    <name>actionName</name>
                 </attribute>
+                <attribute>
+                    <name>actionValue</name>
+                </attribute>
+				<attribute>
+					<name>cronTrigger</name>
+				</attribute>
 			</attributes>
 		</item>
 	</rawItems>
 
 	<canonicalItems>
 		<item>
-			<type>RaspberryPiCommandCanonicalItem</type>
+			<type>PiScheduleCanonicalItem</type>
 			<attributes>
 				<attribute>
-					<name>identifier</name>
+					<name>scheduleName</name>
 					<transformations>
 						<transformation>
-							<rawSource>RaspberryPiCommandRawItem</rawSource>
-							<expression>identifier</expression>
-						</transformation>
-					</transformations>
-				</attribute>
-				<attribute>
-					<name>name</name>
-					<transformations>
-						<transformation>
-							<rawSource>RaspberryPiCommandRawItem</rawSource>
-							<expression>name</expression>
+							<rawSource>PiScheduleRawItem</rawSource>
+							<expression>scheduleName</expression>
 						</transformation>
 					</transformations>
 				</attribute>
                 <attribute>
-                    <name>value</name>
+                    <name>actionName</name>
                     <transformations>
                         <transformation>
-                            <rawSource>RaspberryPiCommandRawItem</rawSource>
-                            <expression>value</expression>
+                            <rawSource>PiScheduleRawItem</rawSource>
+                            <expression>actionName</expression>
                         </transformation>
                     </transformations>
                 </attribute>
+                <attribute>
+                    <name>actionValue</name>
+                    <transformations>
+                        <transformation>
+                            <rawSource>PiScheduleRawItem</rawSource>
+                            <expression>actionValue</expression>
+                        </transformation>
+                    </transformations>
+                </attribute>
+				<attribute>
+					<name>cronTrigger</name>
+					<transformations>
+						<transformation>
+							<rawSource>PiScheduleRawItem</rawSource>
+							<expression>cronTrigger</expression>
+						</transformation>
+					</transformations>
+				</attribute>
 			</attributes>
 		</item>
 

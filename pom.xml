@@ -11,12 +11,13 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jre.source.version>1.7</jre.source.version>
-		<jre.target.version>1.7</jre.target.version>
+		<jre.source.version>1.8</jre.source.version>
+		<jre.target.version>1.8</jre.target.version>
 		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven-war-plugin.version>2.4</maven-war-plugin.version>
         <tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
+        <datahub.version>5.6.0.0-RC1</datahub.version>
         <guava.version>17.0</guava.version>
         <raspberry.pi.api.version>1.0-SNAPSHOT</raspberry.pi.api.version>
         <slf4j.version>1.7.5</slf4j.version>
@@ -26,23 +27,18 @@
 	<dependencyManagement>
 		<dependencies>
             <!-- Data Hub extensions -->
-			<dependency>
-				<groupId>com.hybris.datahub</groupId>
-				<artifactId>datahub-extension-sdk</artifactId>
-				<version>5.5.1.0-RC8</version>
-				<scope>provided</scope>
-			</dependency>
             <dependency>
                 <groupId>com.hybris.datahub</groupId>
-                <artifactId>datahub-webapp</artifactId>
-                <version>5.5.1.0-RC8</version>
-                <type>war</type>
-                <scope>runtime</scope>
+                <artifactId>datahub-extension-sdk</artifactId>
+                <version>${datahub.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.hybris.datahub</groupId>
-                <artifactId>csv-web-service</artifactId>
-                <version>5.5.1.0-RC8</version>
+                <artifactId>datahub-webapp</artifactId>
+                <version>${datahub.version}</version>
+                <type>war</type>
+                <scope>runtime</scope>
             </dependency>
 
             <!-- Raspberry Pi Data Hub extenions -->

@@ -16,11 +16,11 @@
 
     <alias name="defaultRaspberryPiTargetSystemAdapter" alias="raspberryPiTargetSystemAdapter" />
     <bean name="defaultRaspberryPiTargetSystemAdapter" class="org.robbins.adapter.DefaultRaspberryPiTargetSystemAdapter" >
-        <property name="statusClient" ref="statusClient" />
+        <property name="piScheduleClient" ref="piScheduleClient" />
         <property name="publicationActionService" ref="publicationActionService" />
     </bean>
 
-    <alias name="defaultStatusClient" alias="statusClient" />
-    <bean name="defaultStatusClient" class="org.robbins.raspberry.pi.client.DefaultStatusClient" />
+    <alias name="defaultScheduleClient" alias="piScheduleClient" />
+    <bean name="defaultScheduleClient" class="org.robbins.raspberry.pi.client.DefaultPiScheduleClient" />
 
 </beans>

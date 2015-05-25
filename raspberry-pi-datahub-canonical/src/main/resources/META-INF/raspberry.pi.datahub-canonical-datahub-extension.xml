@@ -14,11 +14,11 @@
 
 	<canonicalItems>
 		<item>
-			<type>RaspberryPiCommandCanonicalItem</type>
+			<type>PiScheduleCanonicalItem</type>
 			<status>ACTIVE</status>
 			<attributes>
 				<attribute>
-					<name>identifier</name>
+					<name>scheduleName</name>
 					<model>
 						<localizable>false</localizable>
 						<collection>false</collection>
@@ -26,17 +26,8 @@
 						<primaryKey>true</primaryKey>
 					</model>
 				</attribute>
-				<attribute>
-					<name>name</name>
-					<model>
-						<localizable>false</localizable>
-						<collection>false</collection>
-						<type>String</type>
-						<primaryKey>false</primaryKey>
-					</model>
-				</attribute>
                 <attribute>
-                    <name>value</name>
+                    <name>actionName</name>
                     <model>
                         <localizable>false</localizable>
                         <collection>false</collection>
@@ -44,6 +35,24 @@
                         <primaryKey>false</primaryKey>
                     </model>
                 </attribute>
+                <attribute>
+                    <name>actionValue</name>
+                    <model>
+                        <localizable>false</localizable>
+                        <collection>false</collection>
+                        <type>String</type>
+                        <primaryKey>false</primaryKey>
+                    </model>
+                </attribute>
+				<attribute>
+					<name>cronTrigger</name>
+					<model>
+						<localizable>false</localizable>
+						<collection>false</collection>
+						<type>String</type>
+						<primaryKey>false</primaryKey>
+					</model>
+				</attribute>
 			</attributes>
 		</item>
 	</canonicalItems>
